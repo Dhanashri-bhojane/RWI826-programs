@@ -1,0 +1,64 @@
+// Define the base interface
+interface Animal {
+    void eat();
+}
+
+// Define another interface
+interface Pet {
+    void play();
+}
+
+// Define the first class that implements both interfaces
+class Dog implements Animal, Pet {
+    public void eat() {
+        System.out.println("The dog eats food.");
+    }
+
+    public void play() {
+        System.out.println("The dog plays fetch.");
+    }
+}
+
+// Define the second class that implements both interfaces
+class Cat implements Animal, Pet {
+    public void eat() {
+        System.out.println("The cat eats food.");
+    }
+
+    public void play() {
+        System.out.println("The cat plays with a ball of yarn.");
+    }
+}
+
+// Define the RobotDog class that implements the Pet interface
+class RobotDog implements Pet {
+    public void play() {
+        System.out.println("The robot dog plays a game.");
+    }
+
+    public void charge() {
+        System.out.println("The robot dog charges its battery.");
+    }
+}
+
+// Main class to test the hybrid inheritance
+public class HybridInheritanceExample {
+    public static void main(String[] args) {
+        // Create instances of Dog, Cat, and RobotDog
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+        RobotDog robotDog = new RobotDog();
+        
+        // Call methods for Dog
+        dog.eat();
+        dog.play();
+        
+        // Call methods for Cat
+        cat.eat();
+        cat.play();
+        
+        // Call methods for RobotDog
+        robotDog.play();
+        robotDog.charge();
+    }
+}
