@@ -1,0 +1,36 @@
+// Define the base class
+class Animal {
+    // Method in the base class
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Define a derived class that extends the base class
+class Mammal extends Animal {
+    // Method in the derived class
+    void breathe() {
+        System.out.println("This mammal breathes air.");
+    }
+}
+
+// Define another derived class that extends the Mammal class
+class Dog extends Mammal {
+    // Method in the derived class
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+// Main class to test the multilevel inheritance
+public class MultilevelInheritanceExample {
+    public static void main(String[] args) {
+        // Create an instance of Dog
+        Dog dog = new Dog();
+        
+        // Call methods
+        dog.eat(); // Method from the Animal class
+        dog.breathe(); // Method from the Mammal class
+        dog.bark(); // Method from the Dog class
+    }
+}
