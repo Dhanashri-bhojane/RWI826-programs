@@ -1,0 +1,38 @@
+// Define the base class
+class Animal {
+    // Method in the base class
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+// Define the first derived class that extends the base class
+class Dog extends Animal {
+    // Method in the derived class
+    void bark() {
+        System.out.println("The dog barks.");
+    }
+}
+
+// Define the second derived class that extends the base class
+class Cat extends Animal {
+    // Method in the derived class
+    void meow() {
+        System.out.println("The cat meows.");
+    }
+}
+
+// Main class to test the hierarchical inheritance
+public class HierarchicalInheritanceExample {
+    public static void main(String[] args) {
+        // Create an instance of Dog
+        Dog dog = new Dog();
+        dog.eat(); // Method from the Animal class
+        dog.bark(); // Method from the Dog class
+        
+        // Create an instance of Cat
+        Cat cat = new Cat();
+        cat.eat(); // Method from the Animal class
+        cat.meow(); // Method from the Cat class
+    }
+}
