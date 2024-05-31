@@ -1,0 +1,40 @@
+// Abstract class
+abstract class Animal {
+    // Abstract method (does not have a body)
+    public abstract void makeSound();
+
+    // Regular method
+    public void eat() {
+        System.out.println("This animal is eating.");
+    }
+}
+
+// Subclass (inherited from Animal)
+class Dog extends Animal {
+    // The body of the makeSound() method is provided here
+    public void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+// Another subclass (inherited from Animal)
+class Cat extends Animal {
+    // The body of the makeSound() method is provided here
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a Dog object
+        Dog myDog = new Dog();
+        myDog.makeSound();
+        myDog.eat();
+
+        // Create a Cat object
+        Cat myCat = new Cat();
+        myCat.makeSound();
+        myCat.eat();
+    }
+}
