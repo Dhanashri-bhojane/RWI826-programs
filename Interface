@@ -1,0 +1,40 @@
+// Interface
+interface Animal {
+    // Abstract method (does not have a body)
+    void makeSound();
+
+    // Default method
+    default void eat() {
+        System.out.println("This animal is eating.");
+    }
+}
+
+// Implementing the interface in the Dog class
+class Dog implements Animal {
+    // The body of the makeSound() method is provided here
+    public void makeSound() {
+        System.out.println("Woof");
+    }
+}
+
+// Implementing the interface in the Cat class
+class Cat implements Animal {
+    // The body of the makeSound() method is provided here
+    public void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a Dog object
+        Dog myDog = new Dog();
+        myDog.makeSound();
+        myDog.eat();
+
+        // Create a Cat object
+        Cat myCat = new Cat();
+        myCat.makeSound();
+        myCat.eat();
+    }
+}
